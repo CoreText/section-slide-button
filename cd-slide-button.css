@@ -1,0 +1,70 @@
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+
+  position: fixed;
+  top: unset;
+  bottom: 62px;
+  left: 0;
+  right: 0;
+
+  color: red;
+  background: rgba(255, 255, 255, .8);
+
+  border: 2px solid black;
+  border-radius: 50px;
+
+  transform: scale(1.5);
+  transition: all .25s ease-in-out;
+
+  user-select: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+.nav-btn svg {
+  pointer-events: none;
+}
+.nav-btn--active,
+.nav-btn:hover {
+  background-color: #f0484fba;
+  border-color: white;
+  filter: drop-shadow(0px 2px 16px #ed2028);
+}
+.nav-btn-arrow {
+  fill: black;
+}
+.nav-btn--active *,
+.nav-btn:hover * {
+  fill: white;
+  color: white;
+}
+.nav-btn.to-top {
+  background-color: white;
+  border-color: black;
+  transform: rotate(180deg) scale(1.5) !important;
+  filter: drop-shadow(0px 4px 10px black);
+}
+.nav-btn.to-top * {
+  fill: black;
+  color: black;
+}
+.nav-btn.arrow-up {
+    transform: rotate(180deg) scale(1.4);
+}
+.nav-btn.arrow-down {
+    transform: rotate(0deg) scale(1.4);
+}
+.nav-btn .nav-btn__text {
+  transition: transform .25s ease-in-out;
+}
+.nav-btn.to-top .nav-btn__text {
+  transform: rotate(180deg);
+}
